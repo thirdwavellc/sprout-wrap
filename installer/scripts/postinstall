@@ -1,0 +1,3 @@
+#!/bin/sh
+
+open -a "Terminal.app" "/tmp/sprout-wrap/sprout-wrap"

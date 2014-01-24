@@ -1,0 +1,7 @@
+#!/bin/sh
+
+git clone https://github.com/thirdwavellc/sprout-wrap.git ~/Downloads/
+cd ~/Downloads/sprout-wrap
+sudo gem install bundler
+sudo bundle install
+bundle exec soloist
