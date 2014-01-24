@@ -33,9 +33,9 @@ node_attributes:
   rvm:
     rubies:
       ruby-2.0.0-p353:
-        command_line_options: '--verify-downloads 1'
+        command_line_options: '--verify-downloads 1 --gems=compass'
       ruby-2.1.0:
-        command_line_options: '--verify-downloads 1'
+        command_line_options: '--verify-downloads 1 --gems=compass'
   sprout:
     homebrew:
       casks:
