@@ -14,69 +14,34 @@ recipes:
 
 # development (general)
 - sprout-osx-base::workspace_directory
-- pivotal_workstation::unix_essentials
-- sprout-osx-git::git_projects
 - pivotal_workstation::git_config_global_defaults
-- sprout-osx-git::git_scripts
-
-# development (rails)
-- sprout-osx-rbenv
+- sprout-osx-apps::hg
+- sprout-osx-apps::selenium_webdriver
+- pivotal_workstation::rvm
 - pivotal_workstation::gem_setup
-- pivotal_workstation::mysql
-- pivotal_workstation::postgres
 - sprout-osx-apps::imagemagick
 - sprout-osx-apps::node_js
-- sprout-osx-apps::qt
 
 # apps
 - pivotal_workstation::screen_sharing_app
-- sprout-osx-apps::shiftit
-- pivotal_workstation::mouse_locator
-- sprout-osx-apps::menumeters
-- sprout-osx-apps::ccmenu
 - pivotal_workstation::github_for_mac
 - sprout-osx-apps::iterm2
-- sprout-osx-apps::keycastr
-
-# apps (editors)
-- sprout-osx-apps::textmate
-- sprout-osx-apps::textmate_bundles
-- sprout-osx-apps::textmate_preferences
-
-- sprout-osx-apps::macvim
-- sprout-osx-apps::ctags_exuberant
-
-- sprout-osx-apps::rubymine
-- sprout-osx-rubymine::preferences
 
 - sprout-homebrew
 
 node_attributes:
-  git_pairs_domain: pivotallabs.com
-  git_pairs_authors:
-    - initials: ah
-      name: Abhijit Hiremagalur
-      shortname: abhi
-    - initials: bc
-      name: Brian Cunnie
-      shortname: cunnie
-    - initials: jrhb
-      name: Jonathan Barnes
-    - initials: lw
-      name: Luke Winikates
-      shortname: lwinikates
-  git_projects:
-    -
-      - sprout-wrap
-      - https://github.com/pivotal-sprout/sprout-wrap.git
+  rvm:
+    rubies:
+      ruby-2.0.0-p353:
+        command_line_options: '--verify-downloads 1'
+      ruby-2.1.0:
+        command_line_options: '--verify-downloads 1'
   sprout:
     homebrew:
       casks:
-        - bettertouchtool
-        - dropbox
         - firefox
-        - gitx-rowanj
         - google-chrome
-        - skype
+        - opera
+        - sourcetree
         - vagrant
         - virtualbox
