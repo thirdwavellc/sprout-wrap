@@ -45,3 +45,4 @@ node_attributes:
         - sourcetree
         - vagrant
         - virtualbox
+        - chefdk
